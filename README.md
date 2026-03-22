@@ -17,7 +17,9 @@ Dataype just includes:
 - `inteiro` similar to 32 bit `int`.
 - `flutuante` similar to `float`.
 
-images…
+Shortcut:
+
+![example_image](assets/highlighting_example.png)
 
 ## Extension Settings
 
