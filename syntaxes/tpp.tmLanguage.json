@@ -7,6 +7,15 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#entities"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
 		}
 	],
 	"repository": {
@@ -26,6 +35,45 @@
 				{
 					"name": "constant.character.escape.tpp",
 					"match": "\\\\."
+				}
+			]
+		},
+		"entities": {
+			"patterns": [
+				{
+					"include": "#type"
+				},
+				{
+					"include": "#function"
+				}
+			],
+			"repository": {
+				"type": {
+					"name": "entity.name.type",
+					"match": "\\b(inteiro|flutuante)\\b"
+				},
+				"function": {
+					"name": "entity.name.function",
+					"match": "\\w+\\s*\\("
+				}
+			}
+		},
+		"comments": {
+			"name": "comment.block",
+			"begin": "\\{",
+			"end": "\\}",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tpp",
+					"match": "\\\\."
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\d"
 				}
 			]
 		}
